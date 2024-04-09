@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.UUID;
+
 @Controller
 @AllArgsConstructor
 public class ProductController {
@@ -37,6 +39,8 @@ public class ProductController {
 
     @PostMapping("/create-product")
     public String createProduct(@ModelAttribute("product") Product product){
+
+        product.setId(UUID.randomUUID());
 
         productRepository.save(product);
 

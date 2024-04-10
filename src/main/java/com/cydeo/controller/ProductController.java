@@ -2,10 +2,8 @@ package com.cydeo.controller;
 
 import com.cydeo.model.Product;
 import com.cydeo.repository.ProductRepository;
-import com.cydeo.service.CartService;
 import com.cydeo.service.ProductService;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
